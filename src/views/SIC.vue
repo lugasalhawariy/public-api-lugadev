@@ -101,7 +101,8 @@
             </tr>
           </tbody>
         </table>
-        <div v-if="this.banding == true">
+        <!-- start:banding -->
+        <!-- <div v-if="this.banding == true">
           <div v-if="this.loading" class="btn w-100 mb-4 btn-warning">Loading . . . </div>
           <div v-else @click="getBanding()" class="btn w-100 mb-4 btn-success">Bandingkan Sekarang</div>
         </div>
@@ -133,7 +134,8 @@
               <td colspan="7" class="text-center">Data tidak ada</td>
             </tr>
           </tbody>
-        </table>
+        </table> -->
+        <!-- end:banding -->
       </div>
       <div class="col-12 col-md-4 col-lg-4">
         <!-- card text detail -->
@@ -142,8 +144,6 @@
             Detail Information
           </div>
           <div class="card-body px-2 pt-4">
-            <h4 class="text-center">Negara Utama</h4>
-            <hr>
             <div class="row mx-2">
               <div class="col-12">
                 <div class="row d-flex justify-content-between">
@@ -178,9 +178,33 @@
                     {{ this.netWeightEksport }} Kg
                   </div>
                 </div>
+                <div class="row d-flex justify-content-between">
+                  <div class="col-6" style="font-weight: bold;">
+                    Berat Import
+                  </div>
+                  <div class="col-6" style="text-align: right;">
+                    {{ this.netWeightImport }} Kg
+                  </div>
+                </div>
+                <div class="row d-flex justify-content-between">
+                  <div class="col-6" style="font-weight: bold;">
+                    $-Eksport
+                  </div>
+                  <div class="col-6" style="text-align: right;">
+                    ${{ this.DollarEksport }}
+                  </div>
+                </div>
+                <div class="row d-flex justify-content-between">
+                  <div class="col-6" style="font-weight: bold;">
+                     $-Import
+                  </div>
+                  <div class="col-6" style="text-align: right;">
+                    ${{ this.DollarImport }}
+                  </div>
+                </div>
               </div>
             </div>
-            <h4 class="text-center mt-4">Negara Pebanding</h4>
+            <!-- <h4 class="text-center mt-4">Negara Pebanding</h4>
             <hr>
             <div class="row mx-2">
               <div class="col-12">
@@ -209,7 +233,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
         <!-- card chart detail -->
@@ -258,17 +282,22 @@ export default {
       banding: false,
       ArrayTahun: [],
       netWeightEksport: 0,
-      netWeightImport: 0
+      netWeightImport: 0,
+      DollarEksport: 0,
+      DollarImport: 0
     };
   },
   methods: {
     async getdata() {
       this.netWeightEksport = 0
+      this.netWeightImport = 0
+      this.DollarEksport = 0
+      this.DollarImport = 0
       this.loading = true
-      this.banding = false
-      this.exportBanding = []
-      this.importBanding = []
-      this.sicBanding = []
+      // this.banding = false
+      // this.exportBanding = []
+      // this.importBanding = []
+      // this.sicBanding = []
       await axios.get(`https://comtrade.un.org/api/get`, {
         params: {
           ps: this.tahun,
@@ -283,7 +312,7 @@ export default {
         }
       }).then(res => {
         this.sic = res.data.dataset
-        this.banding = true
+        // this.banding = true
         
         // HITUNG EXPORT
         this.export = res.data.dataset.filter(function (item) {
@@ -296,50 +325,67 @@ export default {
         })
         // HITUNG BERAT PER TAHUN
         this.spliteTahun()
-        this.hitungKilo(this.export)
-        this.hitungKilo(this.import)
+        this.hitungKiloEksport(this.export)
+        this.hitungKiloImport(this.import)
+        this.hitungDollarEksport(this.export)
+        this.hitungDollarImport(this.import)
 
         this.loading = false
         return this.sic.sort
         }).catch(err => console.log(err));
     },
-    async getBanding() {
-      this.loading = true
-      await axios.get(`https://comtrade.un.org/api/get`, {
-        params: {
-          ps: this.tahun,
-          r: this.pebanding,
-          px: 'HS',
-          p: this.negara,
-          cc: this.komoditas,
-          max: 500,
-          freq: 'A',
-          rg: 'all',
-          type: 'C'
-        }
-      }).then(res => {
-        this.sicBanding = res.data.dataset
+    // async getBanding() {
+    //   this.loading = true
+    //   await axios.get(`https://comtrade.un.org/api/get`, {
+    //     params: {
+    //       ps: this.tahun,
+    //       r: this.pebanding,
+    //       px: 'HS',
+    //       p: this.negara,
+    //       cc: this.komoditas,
+    //       max: 500,
+    //       freq: 'A',
+    //       rg: 'all',
+    //       type: 'C'
+    //     }
+    //   }).then(res => {
+    //     this.sicBanding = res.data.dataset
         
-        // HITUNG EXPORT
-        this.exportBanding = res.data.dataset.filter(function (item) {
-          return item.rgDesc.match("Export")
-        })
+    //     // HITUNG EXPORT
+    //     this.exportBanding = res.data.dataset.filter(function (item) {
+    //       return item.rgDesc.match("Export")
+    //     })
 
-        // HITUNG IMPORT
-        this.importBanding = res.data.dataset.filter(function (item) {
-          return item.rgDesc.match("Import")
-        })
+    //     // HITUNG IMPORT
+    //     this.importBanding = res.data.dataset.filter(function (item) {
+    //       return item.rgDesc.match("Import")
+    //     })
         
-        this.loading = false
-        return this.sic
-        }).catch(err => console.log(err));
-    },
+    //     this.loading = false
+    //     return this.sic
+    //     }).catch(err => console.log(err));
+    // },
     spliteTahun(){
       return this.ArrayTahun = this.tahun.split(',')
     },
-    hitungKilo(data){
+    hitungKiloEksport(data){
       return data.forEach(element => {
         this.netWeightEksport += parseInt(element.NetWeight);
+      });
+    },
+    hitungKiloImport(data){
+      return data.forEach(element => {
+        this.netWeightImport += parseInt(element.NetWeight);
+      });
+    },
+    hitungDollarEksport(data){
+      return data.forEach(element => {
+        this.DollarEksport += parseInt(element.TradeValue);
+      });
+    },
+    hitungDollarImport(data){
+      return data.forEach(element => {
+        this.DollarImport += parseInt(element.TradeValue);
       });
     }
   },
