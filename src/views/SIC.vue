@@ -253,6 +253,10 @@
               <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Informasi Pendukung
               </button>
+              <a type="button" class="btn btn-danger mt-3" href="https://docs.google.com/spreadsheets/d/1-KL3Ax43pbs2bgORuGK6wPufM9RZ9GcN47Zf4xkhvpk/edit?usp=sharing" target="_blank">
+                Data Tercatat
+              </a>
+              
             </div>
           </div>
         </div>
@@ -271,8 +275,32 @@
         <div class="modal-body">
           <div class="row">
             <div class="col-12">
-              <h5 class="text-danger fw-bold">Optimalisasi Komoditas Kelapa Sawit, Karet dan Kelapa Sebagai Produk Unggulan Nasional Menuju Negara Pendapatan Tinggi di 2035.</h5>
-              <p>Suatu paradigma baru dalam analisis kondisi dan permasalahan serta strategi ekspor Indonesia agar dapat bersaing dengan produk dari negara lain dan dapat menjadi sumber utama penerimaan dana pembangunan selain utang sekaligus sebagai upaya mempercepat proses pemulihan perekonomian Indonesia.</p>
+              <h5 class="text-danger fw-bold">Optimasi Komoditas Kelapa Sawit, Karet dan Kelapa Sebagai Produk Unggulan Nasional Menuju Negara Pendapatan Tinggi 2035</h5>
+              <p>
+                Dewasa ini pengelolaan sumber daya alam yang berkelanjutan merupakan isu yang sangat penting. Peran usaha sektor perkebunan sebagai komoditas unggulan yang menopang ekonomi nasional, sebagai salah satu penyumbang terbesar devisa negara dengan total nilai ekspor tahun 2019 mencapai US$ 25,36 atau setara Rp. 354,14 triliun (Subagyono, 2021). Tiga jenis komoditas perkebunan yang banyak dikembangkan adalah kelapa sawit, karet dan kelapa. Data ini didukung dengan luas areal, produksi dan produktivitas yang tinggi dibandingkan dengan komoditas perkebunan lainnya.
+              </p>
+              <p>
+                Menurut Direktoral Jendral Perkebunan Kementrian Pertanian, Perkebunan kelapa sawit, karet dan kelapa di Indonesia dikelola dalam 3 bentuk, yaitu: (1) perusahaan besar milik negara yang dikelola oleh BUMN, (2) perusahaan besar yang dikelola oleh perusahaan swasta besar, dan (3) perkebunan rakyat yang dikelola oleh rumah tangga dalam bentuk usaha perorangan.
+              </p>
+              <p>
+                 Perkembangan luas areal perkebunan kelapa sawit, karet, dan kelapa yang terus meningkat melalui berbagai upaya pengembangan, baik yang dilakukan oleh perkebunan besar, proyek-proyek pembangunan maupun swadaya masyarakat. Hingga tahun 2019 tercatat total luas areal kelapa sawit sebesar 14.456.611 Ha, karet 3.676.035 Ha, sedangkan kelapa 3.401.893 Ha. Sehingga didapatkan nilai produktivitas pada masing-masing komoditas yaitu kelapa sawit 3.238 Kg/Ha, karet 1.025 Kg/Ha, dan kelapa 1.114 Kg/Ha (Pertanian, 2021). Perkembangan yang semakin pesat mengindikasikan bahwa Indonesia memliki potensial peningkatan trade value ekspor komoditas perkebunan. Sejalan dengan potensial tersebut, Indonesia memiliki skenario untuk menjadi negara pendapatan tinggi di 2035.
+              </p>
+              <p>
+                Untuk mewujudkan skenario tersebut, Indonesia perlu mengoptimalkan :
+              </p>
+              <p>
+                <ul>
+                  <li>
+                    Peran Pemerintah sebagai penyediaan bibit bermutu, pendampingan di lapangan, fasilitator penyedia akses pemasaran dan pembuat kebijakan mengenai penyediaan lahan.
+                  </li>
+                  <li>
+                    Peran Swasta dalam meningkatkan kemampuan produksi yang berkelanjutan dan mengembangkan sistem pertanian yang berkelanjutan.
+                  </li>
+                  <li>
+                    Peran Masyarakat dalam meningkatkan peran sub sektor perkebunan kedepan. Upaya mengoptimalkan  komoditas  perkebunan  sebagai produk unggulan diperlukan  strategi  dan kebijakan  yang  mampu  mendorong  kegiatan  perkebunan yang  terus meningkat  dan  berkelanjutan, hingga berdampak pada peningkatan iklim investasi ekspor yang mampu mewujudkan Indonesia sebagai negara pendapatan tinggi 2035 (Bapennas, 2019).
+                  </li>
+                </ul>
+              </p>
             </div>
           </div>
           <hr>
@@ -359,7 +387,7 @@
           <hr>
           <div class="row">
             <div class="col-12">
-              <h5 class="fw-bold">Data Kelompok</h5>
+              <h5 class="fw-bold">Identitas Kelompok</h5>
               <div class="container">
                 <div class="row text-center mt-4">
                   <div class="col-12">Universitas Ahmad Dahlan</div>
@@ -371,7 +399,7 @@
                   <div class="col-4">Informatika</div>
                 </div>
                 <div class="row">
-                  <div class="col-4">Marina</div>
+                  <div class="col-4">Marina Indah Prasasti</div>
                   <div class="col-4">1900018053</div>
                   <div class="col-4">Informatika</div>
                 </div>
@@ -379,6 +407,10 @@
                   <div class="col-4">Lugas Alhawariy</div>
                   <div class="col-4">1800018023</div>
                   <div class="col-4">Informatika</div>
+                </div>
+                <hr>
+                <div class="row">
+                  <p class="text-center">Pembimbing: Dinan Yulianto, S.T., M.Eng.</p>
                 </div>
               </div>
             </div>
