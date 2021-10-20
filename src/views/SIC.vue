@@ -367,17 +367,17 @@
                 <hr>
                 <div class="row">
                   <div class="col-4">Tedi Nizar Afrida</div>
-                  <div class="col-4">1800000000</div>
+                  <div class="col-4">1800018023</div>
                   <div class="col-4">Informatika</div>
                 </div>
                 <div class="row">
                   <div class="col-4">Marina</div>
-                  <div class="col-4">1700000000</div>
+                  <div class="col-4">1900018053</div>
                   <div class="col-4">Informatika</div>
                 </div>
                 <div class="row">
                   <div class="col-4">Lugas Alhawariy</div>
-                  <div class="col-4">1800000000</div>
+                  <div class="col-4">1800018023</div>
                   <div class="col-4">Informatika</div>
                 </div>
               </div>
