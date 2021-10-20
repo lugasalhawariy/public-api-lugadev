@@ -75,7 +75,6 @@
         <table class="table table-bordered">
           <thead class="thead">
             <tr>
-              <th>RG Code</th>
               <th>Negara Asal</th>
               <th>Tipe Transaksi</th>
               <th>Negara Tujuan</th>
@@ -86,7 +85,6 @@
           </thead>
           <tbody class="tbody" v-if="sic.length > 0">
             <tr v-for="data in sic" v-bind:key="data.yr">
-              <td>{{ data.rgCode }}</td>
               <td>{{ data.rtTitle }}</td>
               <td>{{ data.rgDesc }}</td>
               <td>{{ data.ptTitle }}</td>
@@ -97,7 +95,7 @@
           </tbody>
           <tbody class="tbody" v-else>
             <tr>
-              <td colspan="7" class="text-center">Data tidak ada</td>
+              <td colspan="6" class="text-center">Data tidak ada</td>
             </tr>
           </tbody>
         </table>
@@ -250,7 +248,144 @@
                 </p>
               </div>
             </div>
+            <div class="row mx-2 mb-4">
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Informasi Pendukung
+              </button>
+            </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Detail Mahasiswa -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">INFORMASI</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12">
+              <h5 class="text-danger fw-bold">Optimalisasi Komoditas Kelapa Sawit, Karet dan Kelapa Sebagai Produk Unggulan Nasional Menuju Negara Pendapatan Tinggi di 2035.</h5>
+              <p>Suatu paradigma baru dalam analisis kondisi dan permasalahan serta strategi ekspor Indonesia agar dapat bersaing dengan produk dari negara lain dan dapat menjadi sumber utama penerimaan dana pembangunan selain utang sekaligus sebagai upaya mempercepat proses pemulihan perekonomian Indonesia.</p>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-12">
+              <h5 class="text-danger fw-bold">Pertumbuhan rata-rata dari 2016-2017 (Sumber: Statistik Pertanian 2019)</h5>
+              <h6 class="fw-bold">1. Luas Area</h6>
+              <ul>
+                <li>Kelapa Sawit : 25,42 %</li>
+                <li>Karet : 0,55 %</li>
+                <li>Kelapa : -4,94 %</li>
+              </ul>
+              <h6 class="fw-bold">2. Produksi (Ton)</h6>
+              <ul>
+                <li>Kelapa Sawit : 19,65 %</li>
+                <li>Karet : 9,60 %</li>
+                <li>Kelapa : -1,72 %</li>
+              </ul>
+              <h6 class="fw-bold">3. Produktivitas (Kg/Ha)</h6>
+              <ul>
+                <li>Kelapa Sawit : 1,28 %</li>
+                <li>Karet : 9,16 %</li>
+                <li>Kelapa : -1,11 %</li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-12">
+              <h5 class="text-danger fw-bold">Luas Areal Komoditas</h5>
+              <h6 class="fw-bold">1. Kelapa Sawit</h6>
+              <ul>
+                <li>Tanaman Rusak / Tanaman Tidak Menghasilkan (TR/TTM) : 466.029 Ha atau 3,22%</li>
+                <li>Tanaman Belum Menghasilkan (TBM) :2.134.168 Ha atau 14,76%</li>
+                <li>Tanaman Menghasilkan (TM) : 11.856.414 Ha atau 80,01%</li>
+              </ul>
+              <h6 class="fw-bold">2. Karet</h6>
+              <ul>
+                <li>Tanaman Rusak / Tanaman Tidak Menghasilkan (TR/TTM) : 137.667Ha atau 4%</li>
+                <li>Tanaman Belum Menghasilkan (TBM) : 316.971 Ha atau 8%</li>
+                <li>Tanaman Menghasilkan (TM) : 3.221.402 Ha atau 88 %</li>
+              </ul>
+              <h6 class="fw-bold">3. Kelapa</h6>
+              <ul>
+                <li>Tanaman Rusak / Tanaman Tidak Menghasilkan (TR/TTM) : 396.724 Ha</li>
+                <li>Tanaman Belum Menghasilkan (TBM) : 455.192 Ha</li>
+                <li>Tanaman Menghasilkan (TM) : 2.550.040 Ha</li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-12">
+              <h5 class="text-danger fw-bold">Penglola Komoditas Perkebunan di Indonesia</h5>
+              <h6 class="fw-bold">1. Kelapa Sawit</h6>
+              <ul>
+                <li>Perusahaan Besar Swasta (PBS) : 7.942.33 Ha atau 54,94%</li>
+                <li>Perusahaan Besar Negara (PBN) : 617.501 Ha atau 4,27%</li>
+                <li>Perkebunan Rakyat (PR) : 5.896.755 Ha atau 40,76%</li>
+              </ul>
+              <h6 class="fw-bold">2. Karet</h6>
+              <ul>
+                <li>Perusahaan Besar Swasta (PBS) : 241.491 Ha atau 6,57%</li>
+                <li>Perusahaan Besar Negara (PBN) : 165.476 Ha atau 4.50%</li>
+                <li>Perkebunan Rakyat (PR) : 3.269.078 Ha atau 88,93%</li>
+              </ul>
+              <h6 class="fw-bold">3. Kelapa</h6>
+              <ul>
+                <li>Perusahaan Besar Swasta (PBS) : 28.086 Ha atau 0,83%</li>
+                <li>Perusahaan Besar Negara (PBN) : 3.929 Ha atau 0,12 %</li>
+                <li>Perkebunan Rakyat (PR) : 3.369.878 Ha atau 99.06%</li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-12">
+              <h5 class="fw-bold">Sumber Pendukung</h5>
+              <p>- <a href="https://pertanian.go.id/" target="_blank">pertanian.go.id</a></p>
+              <p>- <a href="https://www.bappenas.go.id/id/" target="_blank">bappenas.go.id</a></p>
+              <p>- <a href="https://pusatprestasinasional.kemdikbud.go.id/labs/uploads/lampiran/Pedoman%20Satria%20Data%202021%20(1).pdf" target="_blank">Buku Pedoman Satria Data</a></p>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-12">
+              <h5 class="fw-bold">Data Kelompok</h5>
+              <div class="container">
+                <div class="row text-center mt-4">
+                  <div class="col-12">Universitas Ahmad Dahlan</div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-4">Tedi Nizar Afrida</div>
+                  <div class="col-4">1800000000</div>
+                  <div class="col-4">Informatika</div>
+                </div>
+                <div class="row">
+                  <div class="col-4">Marina</div>
+                  <div class="col-4">1700000000</div>
+                  <div class="col-4">Informatika</div>
+                </div>
+                <div class="row">
+                  <div class="col-4">Lugas Alhawariy</div>
+                  <div class="col-4">1800000000</div>
+                  <div class="col-4">Informatika</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
