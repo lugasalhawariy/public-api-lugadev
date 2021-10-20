@@ -12,7 +12,7 @@ const routes = [
     path: '/sic',
     name: 'SIC',
     component: SIC
-  },
+  }
 ]
 
 const router = createRouter({
